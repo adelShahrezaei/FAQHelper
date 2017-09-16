@@ -1,0 +1,99 @@
+[ 
+	{
+		category: "",
+		question:"",
+		answer:""
+	},
+	{
+		category: "Admission",
+		question:"VCU Admission",
+		answer:"Here are the subgroups of VCU admissions. What are your admission requirements for freshmen? What are your admission requirements for transfer students? Does the School of the Arts require additional admission materials? Does the School of Engineering require additional admission materials? Does the School of Nursing require additional admission materials? What are your admission deadlines? When should I submit my application? When will I be notified about my acceptance? Do advanced placement courses help my application? Should I come to campus for an interview? and What do I need to do if I want to come for a campus visit?",
+		keywords:["admission"]
+	},
+	{
+		question:"the question goes here",
+		answer:" answer goes here",
+		category: " category here",
+	},
+	{
+		question: "What recreational facilities are available?",
+		answer: "There are a number of recreational facilities available to students at VCU including  Cary Street Gym, MCV Campus Recreation and Aquatic Center, and Outdoor Adventure Program",
+		category: "Activities",
+		keywords: ["recreational", "recreational facilities"]
+	},
+	{
+		category:"Activities",
+		question:"Do you have an intramural program?",
+		answer:"The university sponsors numerous intramural sports programs, which have some 60 different sporting events. All events have three divisions — men’s , women’s and co-ed. There are usually several different competitive levels from beginners on up.",
+		keywords: ["intramural", "intramural program"]
+	},
+	{
+		category:"Activities",
+		question:"What clubs and organizations are available to students?",
+		answer:"VCU has more than 500 recognized student organizations. They range from social to political, from religious to academic, from honorary to student government. If VCU does not have a group that interests you, you can form an organization of your own.",
+		keywords: ["clubs", "organizations", "clubs and organizations"]
+	},
+	{
+		category:"Admissions",
+		question:"What are your admission requirements for freshmen?",
+		answer:"Prospective freshmen seeking admission to VCU immediately after high school graduation are generally but not solely evaluated on four criteria: High school grade-point average, Test scores from the SAT Reasoning Test or ACT, Rank in class, and High school curriculum.",
+		keywords:["admission freshman", "freshman admission"]
+	},
+	{
+		category:"Admissions",
+		question:"What are your admission requirements for transfer students?",
+		answer:"Transfer applicants must present evidence of good standing at the last institution attended. A cumulative grade-point average of 2.5 on a 4.0 scale in all hours attempted is recommended for admission. Students who have earned fewer than 30 semester (45 quarter) hours must submit their high school transcripts and, if under 22 years of age, SAT/ACT scores.",
+		keywords: ["admission transfers", "transfers admission"]
+	},
+	{
+		category: "Admissions",
+		question:"Does the School of the Arts require additional admission materials?",
+		answer:"Students applying to the School of the Arts must submit the standard university undergraduate application in addition to supplemental materials. There is a $65 application fee for all School of the Arts applicants. For more information about program requirements and deadlines, contact the School of the Arts toll free at (866) 534-3201 or locally at (804) 828-2787, or visit their website.",
+		keywords:["arts admission", "arts admission materials", "school of arts admission", "school of arts additional materials"]
+	},
+	{
+		category: "Admissions",
+		question:"Does the School of Engineering require additional admission materials?",
+		answer:"To be competitive for admission to the School of Engineering, freshman applicants should present a strong GPA (A/B+ average preferred), competitive test scores and a challenging college preparatory curriculum. Freshman applicants to the School of Engineering who are not accepted directly into the school will automatically be considered for admission into the undeclared major in the College of Humanities and Sciences. For additional information, call the School of Engineering at (804) 828-2129, email askengineering@vcu.edu or visit the School of Engineering website at www.egr.vcu.edu.",
+		keywords: ["engineering admission", "engineering admission materials", "school of engineering admission", "school of engineering admission materials"]
+	},
+	{
+		category: "Admissions",
+		question:"Does the School of Nursing require additional admission materials?",
+		answer:"Transfer applicants to the School of Nursing must apply by the Feb. 1 deadline and must submit supplemental admissions materials, which are only available online. Along with the application for undergraduate admission, all transfer applicants to the School of Nursing, regardless of age, are required to submit SAT, ACT or GRE test scores and official transcripts from high school and all colleges and universities. In addition, applicants must submit a one- to two-page essay on the topic “Education and Life: A Personal Statement” in which they discuss their educational goals including why they wish to study their chosen major.",
+		keywords:["nursing admission", "school of nursing admission", "school of nursing admission materials"]
+	},
+	{
+		category: "Admissions",
+		question:"What are your admission deadlines? When should I submit my application?",
+		answer:"Do you wish for deadlines for Freshman applicants, Transfer applicants for Monroe Park Campus, or Transfer applicants for MCV Campus.",
+		answer:"For Freshmen applying for guaranteed admission to the School of Medicine (B.S./M.D.) for the fall semester is November 15. For Freshmen applying for guaranteed admission to programs other than medicine for the fall semester is Nov 15. For Freshmen applying for scholarship consideration for the fall semester is November 15. For Freshmen applying for regular decision for the fall semester is January 16 and for the spring semester is Novemeber 1.",
+		answer:"For Transfer students applying for scholarship consideration for the fall semester is March 15. For Transfer students applying for admission to all undergraduate programs other than those in the School of the Arts for the fall semester is March 15 and for the spring semester November 1. For Transfer students applying for admission to undergraduate programs in the School of the Arts should visit the school’s website at vcu.edu/arts/apply for more information about requirements and deadlines.",
+		answer:"For Clinical laboratory sciences for the fall semester is April 1, for Clinical radiation sciences for fall semester is February 1, for Dental hygiene for the fall semester is January 15 and for Transfer students applying for admission to undergraduate programs in the School of Nursing should visit the School of Nursing admissions website about program requirements and deadlines.",
+		keywords:["deadlines", "admission deadlines", "transfer deadlines", "freshman deadlines", "application deadlines", "freshman application deadlines", "transfer application deadlines"]
+	},
+	{
+		category: "Admissions",
+		question:"When will I be notified about my acceptance?",
+		answer:"Applicants who submit completed materials by Jan. 15 will be notified by April 1. Those applying after Jan. 15 will be notified on a rolling basis until the class is filled."
+		keywords:["accept", "notify", "notified", "acceptance", "notification of acceptance", "acceptance date", "application acceptance date", "freshman acceptance date", "transfer acceptance date", "freshman application acceptance date", "tranfer application acceptance date"]
+	},
+	{
+		category: "Admissions",
+		question:"Do advanced placement courses help my application?",
+		answer:"Yes, AP courses give the admissions staff a better indication of how a student will do at the university because AP courses are equivalent to college courses. Honors-level and AP courses successfully completed could bring a more favorable admissions decision. The university accepts all AP classes (except Studio Art). You must have a score of 3 or better on your AP final exam to receive college credit at VCU.",
+		keywords:["AP", "Advance placement", "AP courses", "Advance placement courses"]
+	},
+	{
+		category: "Admissions",
+		question:"Should I come to campus for an interview?",
+		answer:"Interviews at VCU are not required as part of the application process, but we strongly suggest that students visit campus. We hope our urban university with its academic and cultural diversity is the right setting for you. The only way to determine this is by visiting. A campus visit will enable you to see the physical layout of VCU and give you a chance to talk with currently enrolled students and faculty.",
+		keywords:["interview", "application interview", "campus interview"]
+	},
+	{
+		category: "Admissions",
+		question:"What do I need to do if I want to come for a campus visit?",
+		answer:"The Office of Admissions holds information sessions Monday through Friday at 10:30 a.m. and 2 p.m. and on Saturdays at 10:30 a.m. except on holidays and holiday weekends. The sessions are held in the Welcome Center at 1111 W. Broad St., which is adjacent to the Barnes & Noble @ VCU, and are followed by an hourlong walking tour of the Monroe Park Campus. After the tour is completed, for those who are interested in asking more personal questions, admissions counselors are available to meet with prospective students and their families individually. Register to attend one of our daily information sessions for prospective students and their families.",
+		keywords:["vist", "campus visit", "come"]
+	},
+]
