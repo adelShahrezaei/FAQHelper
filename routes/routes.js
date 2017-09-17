@@ -10,7 +10,7 @@ let appRouter = function (app){
 	app.get('/list', function(req, res){
 
 	})
-	app.get('/get', function(req, res){
+	app.get('/getAnswer', function(req, res){
 
 		var datastoreClient = datastore({
 		  			projectId: 'faqlexa-180223',
@@ -21,14 +21,18 @@ let appRouter = function (app){
 
 		// var key = datastoreClient.key(['Product', 'Computer']);
 		var query = datastoreClient.createQuery('faqs');
-		var caliQuery = query.filter('keywords', 'clubs');
+		console.log(req.query.question)
+		var caliQuery = query.filter('keywords', '>',req.query.question);
 		datastoreClient.runQuery(caliQuery)
 			.then((results) => {
 			// Task entities found.
 			const tasks = results[0];
 			output = ""
 			console.log('Tasks:');
-			tasks.forEach((task) => {output+=JSON.stringify(task)});
+			tasks.forEach((task) => {
+				console.log(task)
+
+				output+=JSON.stringify(task.answer)});
 			res.send(output);
 			});
 	})
