@@ -27,8 +27,54 @@ let extractKeywords = function(text,callback){
 	    console.log('error:', err);
 	  else
 	    console.log(JSON.stringify(response, null, 2));
+
 		callback(response);
 	});
+}
+
+let makeQuery = function(key, callback){
+	output = []
+	var datastoreClient = datastore({
+		  			projectId: 'faqlexa-180223',
+		  			keyFilename: 'FAQLexa-77c9a325dfe0.json'
+		});
+	var query = datastoreClient.createQuery('faqs');
+		// console.log(req.query.question)
+	
+		// Have to implement OR or somehow make more general querywhat are recreational facilities
+		// console.log(key)
+		query = query.filter('keywords','=',key)
+		
+
+		datastoreClient.runQuery(query,function (err, results) {
+		// Task entities found.
+		// console.log(err)
+		// console.log(results)
+		const answers = results[0];
+		if (results.length > 0 ){
+			if (results.length == 1 ){
+				output={answer:results[0].answer}
+			}else{
+				output={answer:results[0].answer}
+			}
+			// results.forEach((ans) => {
+			// console.log(ans)
+
+			// output=JSON.stringify({answer:ans.answer})
+			// })
+		}
+		// else {
+		// 	output = {answer:"There is no answer"}
+		// }
+		
+		// console.log('Tasks:');
+		console.log(output)
+		
+		callback(output)
+	});
+		
+
+		
 }
 
 let appRouter = function (app){
@@ -45,39 +91,34 @@ let appRouter = function (app){
 
 	})
 	app.get('/getAnswer', function(req, res){
+		outputAns=[]
+		allKeys = []
+		count = 0
+		extractKeywords(req.query.question, function(response){
+			console.log(response.keywords)
+			for(i=0; i< response.keywords.length; i++){
+				allKeys = allKeys.concat(response.keywords[i].text.split(" "))
+				// console.log(keywords[i].text)
+			}
+			console.log(allKeys)
+			allKeys.forEach((key)=>{
+				makeQuery(key,(results)=>{
+					count++
+					console.log(outputAns)
+					outputAns.push(results)
+					if(count == allKeys.length){
+						res.send(JSON.stringify(outputAns));	
+					}
+				})
+			})
 
-		var datastoreClient = datastore({
-		  			projectId: 'faqlexa-180223',
-		  			keyFilename: 'FAQLexa-77c9a325dfe0.json'
-		});
+		})
 		
 
 
 		// var key = datastoreClient.key(['Product', 'Computer']);
-		var query = datastoreClient.createQuery('faqs');
-		console.log(req.query.question)
-		extractKeywords(req.query.question, function(keys){
-			// Have to implement OR or somehow make more general querywhat are recreational facilities
-			keys.keywords.forEach((key) => {
-				console.log(key)
-				query = query.filter('keywords','=',key.text)
-			})	
-
-			datastoreClient.runQuery(query)
-			.then((results) => {
-			// Task entities found.
-			const answers = results[0];
-			output = {answer:"There is no answer"}
-			// console.log('Tasks:');
-			answers.forEach((ans) => {
-				console.log(ans)
-
-				output=JSON.stringify({answer:ans.answer})
-			});
-			res.send(output);
-			});
-
-		})
+		
+		
 		// var caliQuery = query.filter('keywords', '>',req.query.question);
 		
 	})
