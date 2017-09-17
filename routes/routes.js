@@ -107,7 +107,8 @@ let appRouter = function (app){
 					console.log(outputAns)
 					outputAns.push(results)
 					if(count == allKeys.length){
-						res.send(JSON.stringify(outputAns));	
+						// res.send(JSON.stringify(outputAns));	
+						res.send(JSON.parse(JSON.stringify(outputAns)));	
 					}
 				})
 			})
