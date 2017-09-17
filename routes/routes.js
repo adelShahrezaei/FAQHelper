@@ -128,19 +128,19 @@ let appRouter = function (app){
 		  			projectId: 'faqlexa-180223',
 		  			keyFilename: 'FAQLexa-77c9a325dfe0.json'
 		});
-		var blogPostData = {
-		category:"Activities",
-		question:"What clubs and organizations are available to students?",
-		answer:"VCU has more than 500 recognized student organizations. They range from social to political, from religious to academic, from honorary to student government. If VCU does not have a group that interests you, you can form an organization of your own.",
-		keywords: ["clubs", "organizations", "clubs and organizations"]
+		console.log(req.query.question)
+		var data = {
+		
+		question:req.query.question,
+		
 		};
-		var blogPostKey = datastoreClient.key('faqs');
+		var blogPostKey = datastoreClient.key('faqsMissing');
 
 		
 
 		datastoreClient.save({
 		  key: blogPostKey,
-		  data: blogPostData
+		  data: data
 		}, function(err) {
 		  // `blogPostKey` has been updated with an ID so you can do more operations
 		  // with it, such as an update.
@@ -148,10 +148,10 @@ let appRouter = function (app){
 
 		  datastoreClient.save({
 		    key: blogPostKey,
-		    data: blogPostData
+		    data: data
 		  }, function(err) {
 		    if (!err) {
-		      // The blog post is now published!
+		     res.send(JSON.stringify({result:"success"})) // The blog post is now published!
 		    }
 		  });
 		});
