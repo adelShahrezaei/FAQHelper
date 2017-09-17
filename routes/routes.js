@@ -1,10 +1,44 @@
 var datastore = require('@google-cloud/datastore');
 
+
+let extractKeywords = function(text,callback){
+
+	var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
+
+	var natural_language_understanding = new NaturalLanguageUnderstandingV1({
+	    "username": "d4d5f054-1b6e-4a34-913a-751a82f3ae03",
+  		"password": "RDoNjZOSXrFs",
+	    'version_date': '2017-02-27'
+	});
+
+	var parameters = {
+	  'text': text,
+	  'features': {
+	    'keywords': {
+	      'sentiment': true,
+	      'emotion': true,
+	      'limit': 10
+	    }
+	  }
+	};
+
+	natural_language_understanding.analyze(parameters, function(err, response) {
+	  if (err)
+	    console.log('error:', err);
+	  else
+	    console.log(JSON.stringify(response, null, 2));
+		callback(response);
+	});
+}
+
 let appRouter = function (app){
 
 
 	app.get("/", function(req, res) {
-    	res.send("Hello World");
+		extractKeywords('what is the deadline for visit',function(response){
+			res.send(response);	
+		});
+    	
 	});
 
 	app.get('/list', function(req, res){
@@ -22,20 +56,30 @@ let appRouter = function (app){
 		// var key = datastoreClient.key(['Product', 'Computer']);
 		var query = datastoreClient.createQuery('faqs');
 		console.log(req.query.question)
-		var caliQuery = query.filter('keywords', '>',req.query.question);
-		datastoreClient.runQuery(caliQuery)
+		extractKeywords(req.query.question, function(keys){
+			// Have to implement OR or somehow make more general query
+			keys.keywords.forEach((key) => {
+				console.log(key)
+				query = query.filter('keywords','=',key.text)
+			})	
+
+			datastoreClient.runQuery(query)
 			.then((results) => {
 			// Task entities found.
-			const tasks = results[0];
-			output = ""
-			console.log('Tasks:');
-			tasks.forEach((task) => {
-				console.log(task)
+			const answers = results[0];
+			output = {answer:"There is no answer"}
+			// console.log('Tasks:');
+			answers.forEach((ans) => {
+				console.log(answ)
 
-				output=JSON.stringify({answer:task.answer})
+				output=JSON.stringify({answer:ans.answer})
 			});
 			res.send(output);
 			});
+
+		})
+		// var caliQuery = query.filter('keywords', '>',req.query.question);
+		
 	})
 
 	app.get('/push', function(req, res){

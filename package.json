@@ -20,6 +20,7 @@
   "dependencies": {
     "@google-cloud/datastore": "^1.1.0",
     "body-parser": "^1.18.1",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "watson-developer-cloud": "^2.39.0"
   }
 }
