@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "faqlexa-180223",
+  "private_key_id": "77c9a325dfe0ecd8634c6f413ecd20286e27558d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDQEMiRZi/zkszj\n63FtZsjn+PvDnZNTB8wPClYJF/ICqLmpJUuP5k17cpbdB8lR7B6wWZxNzCxdAACp\nmy9aRo9reQQXeLp/56iEEC0Se0K4J6RUq4FlRdWTsb+yQnIrn5FTW3US0Ec8Tiv4\niceRMnwsE/UfITuEkwwg1aAczLdh1tvh1CUYPr/gPfkhjozIBdFQvbbQ+D1JNHM0\nGzfVvJ05Cmgnm9QMHWgnhxROvM51/J5VGVqyYJAhZ0igRji31bopx14EVvWpOf4X\nOE885VBWdK0fsTRmRTHLbnHy2/BVAtG9VgIcTMQ6vnJm926ASGTCPmc+nuY3rxcn\nYQmqWGnbAgMBAAECggEAAdjBun3EBHgRKz38xMfkXZB60A448gvLlyT78OeZ51Tw\nNB4giz6AxEVo0Thx/d8ceiO+Rbp/jS72Qy70YsyoPyO2JskZsTjFjJukoIeGvemc\nzSNDwTn0uu5MjDshoHH5PhLNA8WnPDUR5MKXgDjk+CDIvTfVaY/mzA5edf8jKELl\nXIftZmu3khxPQcl85SVUfIfGlFJlQjr6j1BFs+qVIp+8vEa+6nIbHUaAlLJ4FNuz\nPmZSoNpIGg5KN6OBeSpoDYW78k0RdCXDijcpOmCWGUQskXhxhS1K9Zu4vS4pZqYu\nUniRJHtYS6kSNH9PE75M1MJWCcStiArMvn5MdyvAYQKBgQDoUTtsV3/vyquGAN46\nlyxPbJqq0yP7aLKcABH/ymZoQlOuyiIDettzQO5LhzKuvvBqxDW5iSQYlBCzFOMl\nHfKohs5tMCs1LCbqXCNWXtXdbWa4qPI6k/L8Qc4Dt0SIk9KgQndeRzHhd0sqmBNE\n/Zzkj+nTGjBeJlrIcZ3w/Jr7aQKBgQDlRqe3MP2p2nmE1IWqSPBO5oV1bs5i1pRd\nUvhUTdNMDrqq7HlcRybvJwVTFAH7iQVTfcAlD/qGMOuAPViojcsDcZkyTQRkKlPA\nZtYxr4azjCAN72HfFua6eZ+/6BFtmC2wQpFIAVLOf6vZX5msKcvi14rfBRAYEeNC\naqBPoDrmowKBgAtts5ao10pclgOJl2UaeruNhC5TJLoBdIfoGPqUYmVOnf9DQlkZ\neiI5V3+vrvaZvgoCjQILlRMAdbHZnTL+Pim8N/t3GykKev+ceMCO+cZi02LSLNhk\n3tc6BYB5S43Md9gabPTeW73TuIbn5ErIjydPTRlteGOpT138+OAaDSXBAoGALWqf\nkmQ7+0dxxuQqTh8Aq0Bys15tt5p17T6gPmLkNi68v1r0d1kI11rNbTWLZv4vdeh1\nBWJy594M6Gw+gbUEv/vistoawpS33mcAivsQHcTmHJyMsJpivhGVmXgo66K3ejDV\ngoPwmUMlEXwkfrwQzTCRK7hfBcWVVPS2KM++my0CgYAeVhHX0fK72nD9kY391D/r\n+wkXKos9F6nwzgGO1IIWtr2a2WRjYrInyoJJ7Wb4HFTben2Z8nZ/JOMsjsuHeRQd\n8gpKeHv8pco1RQK3S3+7GJ32ifq4aEpybRKaBbzgfsH3NkffSvRasgTGHNIevkql\nySPeXcHk23eMZpyhx9BC4A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "faqacc@faqlexa-180223.iam.gserviceaccount.com",
+  "client_id": "106076522376928030403",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/faqacc%40faqlexa-180223.iam.gserviceaccount.com"
+}
