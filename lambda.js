@@ -64,17 +64,43 @@ const handlers = {
         const event = this.event.request.intent.slots.catchAll
        
         
-        console.log(JSON.stringify(event))
+        // console.log(JSON.stringify(event))
         
-        let url = "http://faqlexa-180223.appspot.com/getAnswer?question="+event
+        // let url = "http://faqlexa-180223.appspot.com/getAnswer?question="+event.value
+        let pushurl = "http://faq-shadelshsh.c9users.io/push?question="+event.value
+        // console.log (url)
+        let url = "http://faq-shadelshsh.c9users.io/getAnswer?question="+event.value
         
         http.get(url, function(res){ 
              res.setEncoding('utf8'); 
              res.on('data', function(data){ 
-                //  chunk = {"answer":"Transfer applicants must present evidence of good standing at the last institution attended. A cumulative grade-point average of 2.5 on a 4.0 scale in all hours attempted is recommended for admission. Students who have earned fewer than 30 semester (45 quarter) hours must submit their high school transcripts and, if under 22 years of age, SAT/ACT scores.\n"}
+                //  data = '[{"answer":"There are a number of recreational facilities available to students at VCU including  Cary Street Gym, MCV Campus Recreation and Aquatic Center, and Outdoor Adventure Program"},{"answer":"There are a number of recreational facilities available to students at VCU including  Cary Street Gym, MCV Campus Recreation and Aquatic Center, and Outdoor Adventure Program"}]'
+                 console.log(data)
+                 data = data.replace(/(\r\n|\n|\r)/gm,"");
+                 console.log(data[0])
                  data = JSON.parse(data)
-                 that.response.speak(data.answer)
-                 that.emit(':responseReady');
+                 if(data[0].answer){
+                     that.response.speak(data[0].answer)
+                     that.emit(':responseReady');
+                 }else{
+                     http.get(pushurl, function(res){ 
+                         
+                         res.setEncoding('utf8'); 
+                         res.on('data', function(data){ 
+                              that.response.speak("I don't have the answer to that question")
+                            that.emit(':responseReady');
+                             
+                         })
+                         
+                     })
+                     // send missing question to db 
+                    
+                     
+                 }
+                 
+                //  that.response.speak(data[0].answer)
+                //  that.response.speak("data[0].answer")
+                 
              })
             
         })
