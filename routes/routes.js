@@ -57,7 +57,7 @@ let appRouter = function (app){
 		var query = datastoreClient.createQuery('faqs');
 		console.log(req.query.question)
 		extractKeywords(req.query.question, function(keys){
-			// Have to implement OR or somehow make more general query
+			// Have to implement OR or somehow make more general querywhat are recreational facilities
 			keys.keywords.forEach((key) => {
 				console.log(key)
 				query = query.filter('keywords','=',key.text)
@@ -70,7 +70,7 @@ let appRouter = function (app){
 			output = {answer:"There is no answer"}
 			// console.log('Tasks:');
 			answers.forEach((ans) => {
-				console.log(answ)
+				console.log(ans)
 
 				output=JSON.stringify({answer:ans.answer})
 			});
