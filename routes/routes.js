@@ -32,7 +32,8 @@ let appRouter = function (app){
 			tasks.forEach((task) => {
 				console.log(task)
 
-				output+=JSON.stringify(task.answer)});
+				output=JSON.stringify({answer:task.answer})
+			});
 			res.send(output);
 			});
 	})
